@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main{
+    margin-top: 100px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+    padding: .5rem;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.container{
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-inline: auto;
+}
+
+.colorContainer{
+    height: 200px;
+    border-radius: 8px;
+    background: red;
+}
+
+.btnContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    height: 100px;
+}
+
+.gameStatus{
+    padding: .5rem;
+    background: #34A853;
+    display: inline;
+    text-align: center;
+    margin-inline: auto;
+    width: 150px;
+    display: none;
+    border-radius: 4px;
+}
+
+.gameInstructions{
+    padding: .5rem;
+    background: #34A853;
+    display: inline;
+    text-align: center;
+    margin-inline: auto;
+    font-weight: 700;
+    color: white;
+    border-radius: 4px;
+}
+
+.scoreContainer{
+    text-transform: uppercase;
+}
