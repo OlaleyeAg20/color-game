@@ -14,8 +14,10 @@ function pickRandomNumber(){
     return randomNumber
 }
 
+let pickRanRandomColor = colorArray[pickRandomNumber()]
+
 function renderRandomColor(){
-    colorContainer.style.background = colorArray[pickRandomNumber()]
+    colorContainer.style.background = pickRanRandomColor
 }
 
 renderRandomColor()
@@ -23,9 +25,8 @@ renderRandomColor()
 selectButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         gameStatus.style.display = 'block'
-        const randomColor = colorArray[pickRandomNumber()]
-        colorContainer.style.background = randomColor
-        if(btn.value == randomColor){
+        
+        if(btn.value == pickRanRandomColor){
             gameStatus.textContent = 'You are Correct!'
             gameStatus.style.background = '#34A853'
             score++
@@ -35,6 +36,10 @@ selectButtons.forEach(btn => {
             gameStatus.style.background = '#DB4437'
             gameStatus.style.color = '#F1F1F1'
         }
+
+        const randomColor = colorArray[pickRandomNumber()]
+        pickRanRandomColor = randomColor
+        renderRandomColor()
     })
 })
 
